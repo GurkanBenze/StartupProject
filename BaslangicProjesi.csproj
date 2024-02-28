@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02CAEF2D-22F3-492C-844D-65EB74D72A7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BaslangicProjesi</RootNamespace>
+    <AssemblyName>BaslangicProjesi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BaslangicProjesi.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\BpDbContext.cs" />
+    <Compile Include="Entity\Basket.cs" />
+    <Compile Include="Entity\BasketProduct.cs" />
+    <Compile Include="Entity\Order.cs" />
+    <Compile Include="Entity\OrdersDetail.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\Wallet.cs" />
+    <Compile Include="Solution\AddBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\AddBalance.Designer.cs">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\CreateCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\CreateCustomerOrder.Designer.cs">
+      <DependentUpon>CreateCustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\DeletedCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\DeletedCustomer.Designer.cs">
+      <DependentUpon>DeletedCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\DeletedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\DeletedProduct.Designer.cs">
+      <DependentUpon>DeletedProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solution\MailChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\MailChanges.Designer.cs">
+      <DependentUpon>MailChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\PasswordChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\PasswordChanges.Designer.cs">
+      <DependentUpon>PasswordChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\ProductOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\ProductOrder.Designer.cs">
+      <DependentUpon>ProductOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\ShowBasketHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\ShowBasketHistory.Designer.cs">
+      <DependentUpon>ShowBasketHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\UpdatedCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\UpdatedCustomer.Designer.cs">
+      <DependentUpon>UpdatedCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\UpdatedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solution\UpdatedProduct.Designer.cs">
+      <DependentUpon>UpdatedProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BasketStatusEnum.cs" />
+    <Compile Include="Utilities\ProductStatusEnum.cs" />
+    <Compile Include="Utilities\UserDeletedEnum.cs" />
+    <EmbeddedResource Include="Solution\AddBalance.resx">
+      <DependentUpon>AddBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\CreateCustomerOrder.resx">
+      <DependentUpon>CreateCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\DeletedCustomer.resx">
+      <DependentUpon>DeletedCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\DeletedProduct.resx">
+      <DependentUpon>DeletedProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Solution\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\MailChanges.resx">
+      <DependentUpon>MailChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\PasswordChanges.resx">
+      <DependentUpon>PasswordChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\ProductOrder.resx">
+      <DependentUpon>ProductOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\ShowBasketHistory.resx">
+      <DependentUpon>ShowBasketHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\UpdatedCustomer.resx">
+      <DependentUpon>UpdatedCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solution\UpdatedProduct.resx">
+      <DependentUpon>UpdatedProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img\Background-img.jpg" />
+    <Content Include="img\ecommerce-product-page-tips.png" />
+    <None Include="Resources\ecommerce-product-page-tips.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
