@@ -1,4 +1,4 @@
-# BaslangicProjesi
+# Startup Project
 
 Merhaba ,
 
