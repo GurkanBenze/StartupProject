@@ -10,12 +10,12 @@ Kullanıcılar için , Kullanıcı Bilgileri düzenleme , Kullanıcı ekleme ,Ku
 
 * Projemde kullandığım yapı Clean Code mantığına yatkın olarak ,mimarisel tasarım ve Çok katmanlı yapıya benzer bir yapı  ile yapmış bulunmaktayım. Basitliği ve Esnekliği baz alarak açıklayıcı obje - tür - metotları kullandım.
 
-*Database yapısı olarak  Dbfirst mantığını kullanarak oluşturulmuş olan veritabanımdaki verileri  entity veri modeli ile projeme çekerek kontrol etmekteyim.
+* Database yapısı olarak  Dbfirst mantığını kullanarak oluşturulmuş olan veritabanımdaki verileri  entity veri modeli ile projeme çekerek kontrol etmekteyim.
 
-*Oluşturmuş olduğum tabloları , mimari yapı içerisinde Entity katmanı içerisinde gruplayarak erişim ve yapı olarak daha düzenli bir hale getirdim.
+* Oluşturmuş olduğum tabloları , mimari yapı içerisinde Entity katmanı içerisinde gruplayarak erişim ve yapı olarak daha düzenli bir hale getirdim.
 
-*Kullanıcı ve Admin işlemleri için , Veri tabanı kontrolu yaparak parola ve e-mail kontrolu ile giriş yetkisini ayarlayarak sistem girişi yaptım.
+* Kullanıcı ve Admin işlemleri için , Veri tabanı kontrolu yaparak parola ve e-mail kontrolu ile giriş yetkisini ayarlayarak sistem girişi yaptım.
 
-*Silme işlemlerinde fiziksel olarak silme işlemi yapmak ve veritabanında yapı bozukluğunun önüne geçmek adına SoftDelete işlemini kullanarak sadece true-false yapısal görünürlüğünü kapatmış bulunmaktayım.
+* Silme işlemlerinde fiziksel olarak silme işlemi yapmak ve veritabanında yapı bozukluğunun önüne geçmek adına SoftDelete işlemini kullanarak sadece true-false yapısal görünürlüğünü kapatmış bulunmaktayım.
 
-*Enumerations yapısı ile işlem okunabilirliğini daha yalın hale getirmek için  Enum sabitleri kullanmış bulunmaktayım.
+* Enumerations yapısı ile işlem okunabilirliğini daha yalın hale getirmek için  Enum sabitleri kullanmış bulunmaktayım.
